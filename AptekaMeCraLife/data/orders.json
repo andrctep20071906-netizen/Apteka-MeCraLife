@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "userId": 1,
+    "orderDate": "2026-06-10T16:00:33.714946600",
+    "totalSum": 245.0,
+    "bonusSpent": 0,
+    "bonusEarned": 12,
+    "pickupPoint": "Аптека №1 (ул. Строителей, 15)",
+    "status": "Новый",
+    "items": [
+      {
+        "productId": 2,
+        "productName": "Нурофен 200мг",
+        "quantity": 1,
+        "priceAtMoment": 245.0
+      }
+    ]
+  }
+]

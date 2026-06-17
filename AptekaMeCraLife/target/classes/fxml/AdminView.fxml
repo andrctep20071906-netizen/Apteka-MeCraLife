@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.mecralife.controllers.AdminController">
+
+    <HBox spacing="10">
+        <Button text="← Назад" onAction="#goBack"/>
+        <Label text="Управление товарами" styleClass="section-title"/>
+    </HBox>
+
+    <Separator/>
+
+    <HBox spacing="20">
+        <TableView fx:id="tableView" prefWidth="550" prefHeight="400">
+            <columns>
+                <TableColumn text="ID" fx:id="colId" prefWidth="50"/>
+                <TableColumn text="Название" fx:id="colName" prefWidth="300"/>
+                <TableColumn text="Цена" fx:id="colPrice" prefWidth="80"/>
+                <TableColumn text="Категория" fx:id="colCategory" prefWidth="120"/>
+            </columns>
+        </TableView>
+
+        <VBox spacing="10" prefWidth="350">
+            <Label text="Добавление/Редактирование товара:"/>
+            <TextField fx:id="nameField" promptText="Название"/>
+            <TextField fx:id="mnnField" promptText="МНН"/>
+            <TextField fx:id="manufacturerField" promptText="Производитель"/>
+            <TextField fx:id="priceField" promptText="Цена"/>
+            <TextField fx:id="formField" promptText="Форма выпуска"/>
+
+            <Label text="Категория:"/>
+            <ComboBox fx:id="categoryCombo" prefWidth="200"/>
+
+            <CheckBox fx:id="inStockCheck" text="В наличии"/>
+
+            <TextArea fx:id="descriptionArea" promptText="Описание" prefHeight="100"/>
+
+            <HBox spacing="10">
+                <Button text="Добавить" onAction="#onAddProduct"/>
+                <Button text="Редактировать" onAction="#onEditProduct"/>
+                <Button text="Обновить" onAction="#onUpdateProduct"/>
+                <Button text="Удалить" onAction="#onDeleteProduct"/>
+            </HBox>
+        </VBox>
+    </HBox>
+
+</VBox>

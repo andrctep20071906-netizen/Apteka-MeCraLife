@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.mecralife.controllers.OrderController">
+
+    <HBox spacing="10">
+        <Button text="← Назад" onAction="#goBack"/>
+        <Label text="Оформление заказа" styleClass="section-title"/>
+    </HBox>
+
+    <Separator/>
+
+    <VBox spacing="10" styleClass="order-form">
+        <Label text="Контактные данные:" styleClass="form-title"/>
+        <TextField fx:id="fullNameField" promptText="ФИО"/>
+        <TextField fx:id="phoneField" promptText="Телефон"/>
+
+        <Label text="Способ получения:"/>
+        <ComboBox fx:id="pickupPointCombo"/>
+
+        <Separator/>
+
+        <Label fx:id="cartSumLabel"/>
+        <Label fx:id="bonusBalanceLabel"/>
+
+        <HBox spacing="10">
+            <Label text="Списать бонусов:"/>
+            <TextField fx:id="bonusToSpendField" onKeyReleased="#onBonusSpendChange"/>
+        </HBox>
+
+        <Label fx:id="finalTotalLabel" styleClass="total-price"/>
+    </VBox>
+
+    <Button fx:id="confirmButton" text="Подтвердить заказ" onAction="#onConfirmOrder" styleClass="confirm-btn"/>
+
+</VBox>

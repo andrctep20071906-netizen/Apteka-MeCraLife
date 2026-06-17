@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.mecralife.controllers.CartController">
+
+    <HBox spacing="10">
+        <Button text="← Назад" onAction="#goBack"/>
+        <Label text="Корзина" styleClass="section-title"/>
+    </HBox>
+
+    <Separator/>
+
+    <TableView fx:id="tableView" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn text="Товар" fx:id="colName" prefWidth="350"/>
+            <TableColumn text="Цена" fx:id="colPrice" prefWidth="100"/>
+            <TableColumn text="Кол-во" fx:id="colQuantity" prefWidth="80"/>
+            <TableColumn text="Сумма" fx:id="colTotal" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <Button text="Удалить выбранный" onAction="#onRemoveSelected"/>
+    </HBox>
+
+    <Separator/>
+
+    <HBox spacing="20">
+        <Label fx:id="totalLabel"/>
+        <Region HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+    <VBox spacing="5" styleClass="bonus-panel">
+        <Label fx:id="bonusBalanceLabel"/>
+        <HBox spacing="10">
+            <Label text="Списать бонусов:"/>
+            <TextField fx:id="bonusToSpendField" onKeyReleased="#onBonusSpendChange"/>
+        </HBox>
+        <Label fx:id="finalTotalLabel" styleClass="total-price"/>
+    </VBox>
+
+    <Button text="Оформить заказ" onAction="#onCheckout" styleClass="checkout-btn"/>
+
+</VBox>

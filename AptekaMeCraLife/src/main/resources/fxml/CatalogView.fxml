@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.mecralife.controllers.CatalogController">
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Button text="← Назад" onAction="#goBack"/>
+        <Label text="Каталог товаров" styleClass="section-title"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Label fx:id="cartCountLabel"/>
+        <Button text="Перейти в корзину" onAction="#goToCart"/>
+    </HBox>
+
+    <Separator/>
+
+    <HBox spacing="10">
+        <TextField fx:id="searchField" promptText="Поиск по названию или МНН..." HBox.hgrow="ALWAYS"/>
+        <Button text="Найти" onAction="#onSearch"/>
+        <Button text="Сбросить" onAction="#onResetFilters"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Категория:"/>
+        <ComboBox fx:id="categoryFilter" prefWidth="180" onAction="#onSearch"/>
+
+        <Label text="Цена от:"/>
+        <TextField fx:id="minPriceField" prefWidth="80" onKeyReleased="#onSearch"/>
+        <Label text="до:"/>
+        <TextField fx:id="maxPriceField" prefWidth="80" onKeyReleased="#onSearch"/>
+
+        <Label text="Форма:"/>
+        <ComboBox fx:id="formFilter" prefWidth="120" onAction="#onSearch"/>
+    </HBox>
+
+    <TableView fx:id="tableView" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn text="ID" fx:id="colId" prefWidth="50"/>
+            <TableColumn text="Название" fx:id="colName" prefWidth="250"/>
+            <TableColumn text="МНН" fx:id="colMnn" prefWidth="150"/>
+            <TableColumn text="Производитель" fx:id="colManufacturer" prefWidth="150"/>
+            <TableColumn text="Цена" fx:id="colPrice" prefWidth="80"/>
+            <TableColumn text="Форма" fx:id="colForm" prefWidth="100"/>
+            <TableColumn text="В наличии" fx:id="colStock" prefWidth="80"/>
+            <TableColumn text="Категория" fx:id="colCategory" prefWidth="120"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <Button text="Просмотреть товар" onAction="#onViewProduct"/>
+        <Button text="Добавить в корзину" onAction="#onAddToCart"/>
+    </HBox>
+
+</VBox>

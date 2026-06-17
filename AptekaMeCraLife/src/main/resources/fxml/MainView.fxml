@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.mecralife.controllers.MainController">
+
+    <top>
+        <VBox styleClass="header">
+            <Label text="Apteka MeCraLife" styleClass="title">
+                <VBox.margin>
+                    <Insets top="20" left="20" bottom="10" right="20"/>
+                </VBox.margin>
+            </Label>
+            <Separator/>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <Label text="Ваше здоровье - наша забота!" styleClass="subtitle"/>
+
+            <VBox fx:id="guestPanel" alignment="CENTER" spacing="15">
+                <Button text="Вход / Регистрация" onAction="#openProfile" prefWidth="250"/>
+                <Button text="Продолжить без регистрации" onAction="#openCatalog" prefWidth="250"/>
+            </VBox>
+
+            <VBox fx:id="userPanel" alignment="CENTER" spacing="15" visible="false">
+                <Label fx:id="welcomeLabel" styleClass="welcome"/>
+                <Label fx:id="bonusLabel" styleClass="bonus"/>
+                <Label fx:id="roleLabel" styleClass="role"/>
+                <Button text="Каталог товаров" onAction="#openCatalog" prefWidth="250"/>
+                <Button text="Корзина" onAction="#openCart" prefWidth="250"/>
+                <Button text="Профиль" onAction="#openProfile" prefWidth="250"/>
+
+                <VBox fx:id="pharmacistPanel" spacing="10" visible="false">
+                    <Label text="Панель фармацевта" styleClass="panel-title"/>
+                    <Button text="Просмотр заказов" onAction="#openProfile" prefWidth="250"/>
+                </VBox>
+
+                <VBox fx:id="managerPanel" spacing="10" visible="false">
+                    <Label text="Панель менеджера" styleClass="panel-title"/>
+                    <Button text="Управление пользователями" onAction="#openUsers" prefWidth="250"/>
+                </VBox>
+
+                <VBox fx:id="adminPanel" spacing="10" visible="false">
+                    <Label text="Панель администратора" styleClass="panel-title"/>
+                    <Button text="Управление товарами" onAction="#openAdmin" prefWidth="250"/>
+                    <Button text="Управление пользователями" onAction="#openUsers" prefWidth="250"/>
+                </VBox>
+
+                <Button text="Выйти" onAction="#logout" prefWidth="250" styleClass="logout-btn"/>
+            </VBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" styleClass="footer">
+            <Label text="© 2026 Apteka MeCraLife. Все права защищены."/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

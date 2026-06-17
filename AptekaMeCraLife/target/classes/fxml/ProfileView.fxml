@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.mecralife.controllers.ProfileController">
+
+    <HBox spacing="10">
+        <Button text="← Назад" onAction="#goBack"/>
+        <Label text="Профиль" styleClass="section-title"/>
+    </HBox>
+
+    <Separator/>
+
+    <Label fx:id="welcomeLabel" styleClass="welcome"/>
+    <Label fx:id="roleLabel"/>
+    <Label fx:id="bonusLabel" styleClass="bonus"/>
+
+    <VBox spacing="10" styleClass="profile-form">
+        <Label text="Редактирование профиля:"/>
+        <TextField fx:id="fullNameField" promptText="ФИО"/>
+        <TextField fx:id="phoneField" promptText="Телефон"/>
+        <PasswordField fx:id="newPasswordField" promptText="Новый пароль (оставьте пустым, если не меняете)"/>
+        <Button text="Сохранить" onAction="#onSaveProfile"/>
+    </VBox>
+
+    <VBox spacing="10">
+        <Label text="История заказов:"/>
+        <TableView fx:id="ordersTable" prefHeight="200">
+            <columns>
+                <TableColumn text="№" fx:id="colOrderId" prefWidth="60"/>
+                <TableColumn text="Дата" fx:id="colDate" prefWidth="200"/>
+                <TableColumn text="Сумма" fx:id="colTotal" prefWidth="100"/>
+                <TableColumn text="Статус" fx:id="colStatus" prefWidth="100"/>
+            </columns>
+        </TableView>
+    </VBox>
+
+    <Button text="Выйти из аккаунта" onAction="#onLogout" styleClass="logout-btn"/>
+
+</VBox>

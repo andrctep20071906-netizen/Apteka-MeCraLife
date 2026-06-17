@@ -1,0 +1,148 @@
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-base: #ffffff;
+    -fx-background: #f5f7fa;
+}
+
+.header {
+    -fx-background-color: linear-gradient(to right, #2ecc71, #27ae60);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+.title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.subtitle {
+    -fx-font-size: 18px;
+    -fx-text-fill: #555;
+}
+
+.section-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.welcome {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2ecc71;
+}
+
+.bonus {
+    -fx-font-size: 14px;
+    -fx-text-fill: #f39c12;
+    -fx-font-weight: bold;
+}
+
+.role {
+    -fx-font-size: 12px;
+    -fx-text-fill: #3498db;
+}
+
+.panel-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.bonus-text {
+    -fx-text-fill: #e67e22;
+    -fx-font-weight: bold;
+}
+
+.product-name {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.product-price {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e74c3c;
+}
+
+.total-price {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e74c3c;
+}
+
+.button {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+    -fx-background-radius: 5;
+}
+
+.button:hover {
+    -fx-background-color: #27ae60;
+}
+
+.logout-btn {
+    -fx-background-color: #e74c3c;
+}
+
+.logout-btn:hover {
+    -fx-background-color: #c0392b;
+}
+
+.checkout-btn, .confirm-btn {
+    -fx-background-color: #3498db;
+}
+
+.checkout-btn:hover, .confirm-btn:hover {
+    -fx-background-color: #2980b9;
+}
+
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 5;
+}
+
+.table-view .column-header {
+    -fx-background-color: #ecf0f1;
+    -fx-font-weight: bold;
+}
+
+.text-field, .combo-box, .text-area {
+    -fx-background-radius: 5;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 5;
+    -fx-padding: 5;
+}
+
+.text-field:focused, .combo-box:focused, .text-area:focused {
+    -fx-border-color: #2ecc71;
+}
+
+.footer {
+    -fx-background-color: #34495e;
+    -fx-padding: 10;
+}
+
+.footer Label {
+    -fx-text-fill: white;
+}
+
+.product-card, .order-form, .profile-form, .bonus-panel {
+    -fx-background-color: white;
+    -fx-padding: 15;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 5, 0, 0, 2);
+}
+
+.form-title {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #2c3e50;
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.mecralife.controllers.ProductCardController">
+
+    <HBox spacing="10">
+        <Button text="← Назад" onAction="#goBack"/>
+        <Label text="Карточка товара" styleClass="section-title"/>
+    </HBox>
+
+    <Separator/>
+
+    <VBox spacing="10" styleClass="product-card">
+        <Label fx:id="nameLabel" styleClass="product-name"/>
+        <Label fx:id="categoryLabel"/>
+        <Label fx:id="mnnLabel"/>
+        <Label fx:id="manufacturerLabel"/>
+        <Label fx:id="formLabel"/>
+        <Label fx:id="priceLabel" styleClass="product-price"/>
+        <Label fx:id="stockLabel"/>
+        <Label fx:id="bonusLabel" styleClass="bonus-text"/>
+
+        <Separator/>
+
+        <Label text="Описание:"/>
+        <Label fx:id="descriptionLabel" wrapText="true"/>
+
+        <HBox spacing="10">
+            <Label text="Количество:"/>
+            <TextField fx:id="quantityField" prefWidth="80" text="1"/>
+            <Button text="Добавить в корзину" onAction="#onAddToCart"/>
+        </HBox>
+    </VBox>
+
+</VBox>
